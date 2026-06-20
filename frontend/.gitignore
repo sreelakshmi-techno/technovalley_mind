@@ -1,0 +1,127 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+
+# Environment Variables
+.env
+.env.local
+.env.*
+
+# Python Build Files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Pytest
+.pytest_cache/
+
+# Mypy
+.mypy_cache/
+
+# Coverage
+.coverage
+htmlcov/
+
+# =========================
+# Node.js / React / Vite
+# =========================
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# npm/yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =========================
+# Database
+# =========================
+*.db
+*.sqlite3
+
+# PostgreSQL dumps
+*.sql
+*.dump
+
+# =========================
+# Documents & Uploads
+# =========================
+backend/documents/*.pdf
+backend/uploads/
+uploads/
+
+# =========================
+# AI / ML Models
+# =========================
+*.pt
+*.pth
+*.onnx
+*.bin
+*.ckpt
+
+# ChromaDB
+chroma/
+chroma_db/
+persist_directory/
+
+# =========================
+# IDEs
+# =========================
+.vscode/*
+!.vscode/extensions.json
+
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Temporary Files
+# =========================
+tmp/
+temp/
+.cache/
+
+# =========================
+# Docker
+# =========================
+docker-compose.override.yml
+
+# =========================
+# Secrets
+# =========================
+*.pem
+*.key
+*.crt
