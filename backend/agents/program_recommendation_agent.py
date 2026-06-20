@@ -1,11 +1,18 @@
+import os
 import re
 
+from dotenv import load_dotenv
 from langchain_ollama import OllamaLLM
 
 from agents.base_agent_prompt import PROGRAM_RECOMMENDATION_PROMPT
 from rag.retriever import retrieve_documents
 
-llm = OllamaLLM(model="llama3")
+load_dotenv()
+
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+MODEL = os.getenv("MODEL", "llama3")
+
+llm = OllamaLLM(model=MODEL, base_url=OLLAMA_URL)
 
 BROCHURE_COURSE_CATALOG = """
 Technovalley brochure catalog (use these as the main source for course/program questions):

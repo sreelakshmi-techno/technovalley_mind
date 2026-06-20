@@ -1,6 +1,14 @@
+import os
+
+from dotenv import load_dotenv
 from langchain_ollama import OllamaLLM
 
-llm = OllamaLLM(model="llama3")
+load_dotenv()
+
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+MODEL = os.getenv("MODEL", "llama3")
+
+llm = OllamaLLM(model=MODEL, base_url=OLLAMA_URL)
 
 def faq_agent(query):
 

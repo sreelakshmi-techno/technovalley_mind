@@ -167,4 +167,6 @@ generated/
 # LARGE PDFs (OPTIONAL)
 # Uncomment if not pushing PDFs
 # ==========================================
-# *.pdf
+# PDFs
+*.pdf
+backend/documents/*.pdf

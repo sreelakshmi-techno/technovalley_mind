@@ -1,15 +1,20 @@
+import os
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+MODEL = os.getenv("MODEL", "llama3")
+ASSISTANT_NAME = os.getenv("ASSISTANT_NAME", "Tessa")
+
 from fastapi import FastAPI
-
 from fastapi.middleware.cors import CORSMiddleware
-
 from pydantic import BaseModel
 
 from orchestrator.graph import graph
-
 from agents.policy_agent import policy_agent
-
 from memory.state_manager import get_conversation_state
-
 
 app = FastAPI()
 
