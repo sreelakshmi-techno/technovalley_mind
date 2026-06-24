@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function Chat() {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
@@ -28,7 +30,7 @@ export default function Chat() {
     setMessages((prev) => [...prev, userMsg]);
 
     try {
-      const res = await axios.post("http://localhost:8000/chat", {
+      const res = await axios.post(API_URL, {
         message: trimmed,
         session_id: sessionId
       });

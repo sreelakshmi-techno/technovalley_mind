@@ -125,3 +125,4 @@ docker-compose.override.yml
 *.pem
 *.key
 *.crt
+.vercel
